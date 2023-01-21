@@ -8,13 +8,8 @@ pipeline {
     }
 
     stage('test') {
-      agent {
-        docker {
-            image 'node:14-buster'
-        }
-      }
       steps {
-        sh 'node --version'
+        sh 'ls -la'
       }
     }
 
