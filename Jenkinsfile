@@ -13,5 +13,16 @@ pipeline {
       }
     }
 
+    stage('test node') {
+        agent {
+            docker {
+                image 'node:14-buster'
+            }
+        }
+        steps {
+           sh 'node --version'
+        }
+    }
+
   }
 }
